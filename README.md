@@ -1,24 +1,34 @@
-# README
+# The Flower Room
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Models
+### Product
+### Order
+### Order Item
+### Basket
 
-Things you may want to cover:
+## Controllers
+### Products
+### Orders
+### Order Items
+### Baskets
+### Pages
 
-* Ruby version
+## Features
+- Admin panel for content uploading / editing.
+- One-off card payments with Stripe
+- Mailer for order confirmation email
 
-* System dependencies
+## Nice-to-have's
+- Javascript Menu
+- Grid layout product index
 
-* Configuration
+## Skills focus
+- Clear commit messages
+- Testing with RSpec & Capybara
+- Heroku Pipeline
+- Sass
+- Rails & JavaScript
+- Git Branching
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Admin
+- See wiki
