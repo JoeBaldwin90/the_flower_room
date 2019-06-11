@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: the_flower_room_production
+  database: theflowerroomdb
   username: the_flower_room
   password: <%= ENV['THE_FLOWER_ROOM_DATABASE_PASSWORD'] %>
