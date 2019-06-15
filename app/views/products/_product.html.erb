@@ -1,2 +1,7 @@
 <h2><%= link_to product.title, product_path(product) %> - <%= product.price %></h2>
+
+<%= link_to product_path(product) do %>
+  <%= image_tag product.image1.medium.to_s %>
+<% end %>
+
 <p><%= product.description %></p>

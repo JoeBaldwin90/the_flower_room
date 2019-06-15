@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :products
 
-  root "products#index"
+  get "info", to: "pages#info"
+
+  root "pages#home"
 
 end
