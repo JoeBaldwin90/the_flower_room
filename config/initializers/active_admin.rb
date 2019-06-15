@@ -117,7 +117,7 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  # config.root_to = 'dashboard#index'
+  config.root_to = 'products#index'
 
   # == Admin Comments
   #
@@ -270,12 +270,10 @@ ActiveAdmin.setup do |config|
   #
   # Pagination is enabled by default for all resources.
   # You can control the default per page count for all resources here.
-  #
-  # config.default_per_page = 30
+  config.default_per_page = 30
   #
   # You can control the max per page count too.
-  #
-  # config.max_per_page = 10_000
+  config.max_per_page = 100
 
   # == Filters
   #
@@ -283,7 +281,7 @@ ActiveAdmin.setup do |config|
   # hand side with a filter for each attribute of the registered model.
   # You can enable or disable them for all resources here.
   #
-  # config.filters = true
+  # config.filters = false
   #
   # By default the filters include associations in a select, which means
   # that every record will be loaded for each association.
