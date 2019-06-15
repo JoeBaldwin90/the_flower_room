@@ -3,4 +3,9 @@
 
 <%= image_tag @product.image1.large.to_s %>
 
+<%= simple_form_for [@product, @order_item] do |f| %>
+  <%= f.input :quantity %>
+  <%= f.button :submit, "Add to cart" %>
+<% end %>
+
 <p><%= link_to "Back to all products", products_path %></p>
