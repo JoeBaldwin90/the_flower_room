@@ -32,11 +32,11 @@ ActiveAdmin.register Product do
     end
 
     f.inputs 'Images' do
-      f.input :image_1
-      f.input :image_2
-      f.input :image_3
-      f.input :image_4
-      f.input :image_5
+      f.input :image1
+      f.input :image2
+      f.input :image3
+      f.input :image4
+      f.input :image5
     end
 
     f.actions
