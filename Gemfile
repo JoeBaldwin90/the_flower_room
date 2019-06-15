@@ -36,7 +36,7 @@ gem 'carrierwave', '~> 1.0' # For image uploading
 gem "fog-aws" # For image hosting
 gem 'mini_magick', '~> 4.8' # For resizing uploaded images
 gem 'activeadmin' # To allow Admin control of Products and Pages
-gem 'devise' # Required with ActiveAdmin
+gem 'devise' # Admin users for ActiveAdmin
 # gem 'stripe' # For accepting one-off payments
 
 # Use Capistrano for deployment
