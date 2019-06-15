@@ -1,5 +1,7 @@
 {
   "scripts": {
-    "postdeploy": "rails db:migrate"
+    "postdeploy": "rails db:migrate",
+    "postdeploy": "heroku rails db:migrate",
+    "postdeploy": "heroku rails db:seed"
   }
 }
