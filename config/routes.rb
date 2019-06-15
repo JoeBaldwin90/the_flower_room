@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :order_items
   end
 
+  resource :cart
+
   get "info", to: "pages#info"
 
   root "pages#home"

@@ -1,0 +1,43 @@
+<% if @current_cart.order_items.any? %>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% @current_cart.order_items.each do |item| %>
+
+        <tr>
+
+          <td>
+            <span><%= item.product.title %></span>
+            <%= image_tag item.product.image1.thumb.to_s %>
+          </td>
+          <td>£<%= item.product.price %></td>
+          <td>
+            <%= simple_form_for [item.product, item] do |f| %>
+            <span class="selector" onclick="this.parentNode.querySelector('#order_item_quantity').stepDown()">–</span>
+            <%= f.input :quantity, as: :integer, label: false, input_html: { class: 'qty' } %>
+            <span class="selector" onclick="this.parentNode.querySelector('#order_item_quantity').stepUp()">+</span>
+            <%= f.button :submit, "Update quantity" %>
+          <% end %>
+        </td>
+        <td><%= link_to "Remove", product_order_item_path(item.product, item), method: :delete %></td>
+      </tr>
+
+    <% end %>
+
+  </tbody>
+</table>
+
+<% else %>
+<p>There are no items in your cart</p>
+<% end %>
