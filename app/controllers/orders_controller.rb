@@ -6,13 +6,15 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @order.add_from_cart(@current_cart)
   end
 
   def create
     @order = Order.new(form_params)
+    @order.add_from_cart(@current_cart)
 
     if @order.save
-      reset_session # same as log-out
+      reset_session # empty cart
       flash[:success] = "Order completed"
       redirect_to order_path(@order)
     else
