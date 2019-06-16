@@ -32,6 +32,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Project Gems
 gem 'simple_form' # For easier form formatting
+gem 'country_select', '~> 4.0' # To fix country_select bug
 gem 'carrierwave', '~> 1.0' # For image uploading
 gem "fog-aws" # For image hosting
 gem 'mini_magick', '~> 4.8' # For resizing uploaded images
