@@ -36,8 +36,12 @@
     <% end %>
 
   </tbody>
-  
+
 </table>
+
+<button>
+  <%= link_to "Proceed to payment", new_order_path %>
+</button>
 
 <% else %>
 <p>There are no items in your cart</p>

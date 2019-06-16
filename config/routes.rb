@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resource :cart
 
+  resources :orders
+
   get "info", to: "pages#info"
 
   root "pages#home"
