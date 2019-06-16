@@ -39,6 +39,8 @@
 
 </table>
 
+<p>Total: <%= number_to_currency current_cart.total_price_in_pounds, unit: "£" %></p>
+
 <button>
   <%= link_to "Proceed to payment", new_order_path %>
 </button>
