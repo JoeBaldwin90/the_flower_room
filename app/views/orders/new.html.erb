@@ -1,2 +1,20 @@
 <h1>Checkout</h1>
 <p>Number of order_items in cart:</p>
+
+<%= simple_form_for @order do |f| %>
+  <fieldset>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+  </fieldset>
+
+  <fieldset>
+    <%= f.input :address_1 %>
+    <%= f.input :address_2 %>
+    <%= f.input :city %>
+    <%= f.input :postal_code %>
+    <%= f.input :country, priority: ['United Kingdom'] %>
+  </fieldset>
+
+  <%= f.button :submit, "Pay for your flowers!" %>
+<% end %>
