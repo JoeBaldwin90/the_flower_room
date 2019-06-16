@@ -12,4 +12,8 @@ class Product < ApplicationRecord
   mount_uploader :image4, ProductImageUploader
   mount_uploader :image5, ProductImageUploader
 
+  def price_in_pounds
+    price / 100
+  end
+
 end
