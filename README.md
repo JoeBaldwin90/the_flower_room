@@ -10,7 +10,7 @@
 ### Products
 ### Orders
 ### Order Items
-### Baskets
+### Carts
 ### Pages
 
 ## Features
@@ -31,4 +31,4 @@
 - Git Branching
 
 ## Admin
-- See wiki
+- See wiki.
