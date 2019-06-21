@@ -1,1 +1,1 @@
-Stripe.api_key = Rails.application.credentials.stripe_public_key_test
+Stripe.api_key = Rails.application.credentials.stripe_secret_key_test
