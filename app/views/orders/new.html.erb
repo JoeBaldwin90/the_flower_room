@@ -33,7 +33,7 @@
 <!-- Stripe's front-end JavaScript -->
 <script>
 // Link to stripe API keys
-var stripe = Stripe('<%= Rails.application.credentials.stripe_public_key_test %>');
+var stripe = Stripe('<%= Rails.application.credentials.stripe_public_key_live %>');
 
 var elements = stripe.elements({
   fonts: [{cssSrc: 'https://fonts.googleapis.com/css?family=Roboto'}]
