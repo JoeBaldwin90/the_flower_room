@@ -1,0 +1,17 @@
+<h1>Hi, <%= @order.first_name %>,</h1>
+
+<p>
+  Thanks for ordering with me!
+</p>
+
+<p>
+  You've paid <%= number_to_currency @order.order_total_price_in_pounds, unit: "£" %> for your flowers, so I'll get busy making them. 
+</p>
+
+<p>
+  Your order reference is <%= @order.id %>. Remember to keep it safe.
+</p>
+
+<p>Thanks,</p>
+
+<p>Lesley</p>
