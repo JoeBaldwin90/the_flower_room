@@ -9,11 +9,3 @@
     }
   }
 }
-
-{
-  "env": {
-    "GITHUB_AUTH_TOKEN": {
-      "required": true
-    }
-  }
-}
