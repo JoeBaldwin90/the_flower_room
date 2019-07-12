@@ -5,7 +5,7 @@
 </p>
 
 <p>
-  You've paid <%= number_to_currency @order.order_total_price_in_pounds %> for your flowers, so I'll get busy making them. 
+  You've paid <%= number_to_currency @order.order_total_price_in_pounds, unit: "£" %> for your flowers, so I'll get busy making them. 
 </p>
 
 <p>
