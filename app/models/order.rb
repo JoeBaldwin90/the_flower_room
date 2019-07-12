@@ -22,7 +22,7 @@ class Order < ApplicationRecord
     @total = 0
 
     order_items.all.each do |item|
-      @total = @total + item.quantity * item.product.price
+      @total = @total + (item.quantity * item.product.price) / 100
     end
 
     @total
