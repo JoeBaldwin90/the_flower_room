@@ -1,5 +1,11 @@
 {
   "scripts": {
     "postdeploy": "rails db:migrate"
+  },
+
+  "env": {
+    "GITHUB_AUTH_TOKEN": {
+      "required": true
+    }
   }
 }
