@@ -47,4 +47,17 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # SendGrid config
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.sendgrid.net',
+    port:                 587,
+    domain:               'www.theflowerroombarnes.com',
+    user_name:            Rails.application.credentials.sendgrid_username,
+    password:             Rails.application.credentials.sendgrid_password,
+    authentication:       'plain',
+    enable_starttls_auto: true
+    }
 end
