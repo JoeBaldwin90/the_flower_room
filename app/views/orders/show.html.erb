@@ -6,6 +6,8 @@
   <li><%= item.quantity %> <%= item.product.title %> at <%= number_to_currency item.product.price_in_pounds, unit: "£" %> each. </li>
 <% end %>
 
+<p>We've sent an order confirmation email to <strong><%= @order.email %></strong>.</p>
+
 <button>
   <%= link_to "Back to home", root_path %>
 </button>

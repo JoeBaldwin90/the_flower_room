@@ -1,11 +1,15 @@
 <h1>Hi, <%= @order.first_name %>,</h1>
 
 <p>
-  Thanks for ordering with me!
+  Thanks for ordering. Here's what you bought:
 </p>
 
+<% @order.order_items.each do |item| %>
+  <li><%= item.quantity %> <%= item.product.title %> at <%= number_to_currency item.product.price_in_pounds, unit: "£" %> each. </li>
+<% end %>
+
 <p>
-  You've paid <%= number_to_currency @order.order_total_price_in_pounds, unit: "£" %> for your flowers, so I'll get busy making them. 
+  You've paid <%= number_to_currency @order.order_total_price_in_pounds, unit: "£" %> for your flowers, so I'll get busy making them.
 </p>
 
 <p>
