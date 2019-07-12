@@ -1,0 +1,11 @@
+Hi, <%= @order.first_name %>,
+
+Thanks for ordering with me!
+
+You've paid <%= number_to_currency @order.order_total_price_in_pounds %> for your flowers, so I'll get busy making them.
+
+Your order reference is <%= @order.id %>. Remember to keep it safe.
+
+Thanks,
+
+Lesley
