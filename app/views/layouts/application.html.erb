@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>TheFlowerRoom</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="https://js.stripe.com/v3/"></script>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,19 +15,34 @@
   <body>
 
     <% if flash[:success].present? %>
-      <div class="success">
+      <div class="alert alert-success" role="alert">
         <%= flash[:success] %>
       </div>
     <% end %>
 
     <header>
-      <h1><%= link_to "The Flower Room", root_path %></h1>
-      <nav>
-        <%= link_to "Shop", products_path %>
-        <%= link_to "Info", info_path %>
-        <%= link_to cart_path do %>
-          Cart (<%= number_to_currency @current_cart.total_price_in_pounds, unit: "£" %>)
-        <% end %>
+      <nav class="navbar fixed-top navbar-expand-sm navbar-light">
+        <logo><%= link_to "The Flower Room", root_path, :class => 'navbar-brand' %></logo>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <%= link_to "Shop", products_path, :class => 'nav-link active' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Info", info_path, :class => 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to cart_path, :class => 'nav-link' do %>
+              Cart (<%= number_to_currency @current_cart.total_price_in_pounds, unit: "£" %>)
+            <% end %>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
