@@ -39,6 +39,7 @@ gem 'mini_magick', '~> 4.8' # For resizing uploaded images
 gem 'activeadmin' # To allow Admin control of Products and Pages
 gem 'devise' # Admin users for ActiveAdmin
 gem 'stripe' # For accepting one-off payments
+gem 'bootstrap', '~> 4.3.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
