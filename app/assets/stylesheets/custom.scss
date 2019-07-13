@@ -1,0 +1,31 @@
+//== Colors
+$brand-primary:         #FFEFF9 !default; // Pink
+$brand-success:         #d1ffd6 !default; // Green
+$brand-info:            #d8c2ff !default; // Purple
+$brand-warning:         #ff7878 !default; // Red
+
+// Text
+$body-bg:               #fff !default;
+$text-color:            #b4b4b4 !default;
+$link-color:            #000 !default;
+$link-hover-color:      lighten($link-color, 25%) !default;
+$link-hover-decoration: none !default;
+
+//== Typography
+// Body
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700&display=swap');
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-base:        "Josefin Slab", serif !default;
+
+// Headings
+$headings-font-family:    "Fredericka the Great", serif !default;
+$headings-line-height:    1.2 !default;
+$headings-color:          inherit !default;
+
+//== Other
+
+nav {
+  background-color: #fff;
+}
