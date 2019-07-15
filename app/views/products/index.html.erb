@@ -1,7 +1,15 @@
-<h1>Products</h1>
-
-<div class="container">
-  <div class='row'>
-      <%= render partial: "product", collection: @products %>
+<section class="container vertical-pad">
+  <div class="text-60">
+    <h1>Products</h1>
+    <p>All of our flowers are hand-prepared by local flortists in our store in Barnes. All of our flowers are fresh, responsibly sourced and grown with love.</p>
+    <p>Most of our work is bespoke and made-to-order, but these are some of our signature boquets which we think you'll love.</p>
+  </section>
   </div>
-</div>
+
+<section class="blockhero vertical-pad">
+  <div class="container">
+    <div class="row">
+      <%= render partial: "product", collection: @products %>
+    </div>
+  </div>
+</section>
