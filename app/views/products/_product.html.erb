@@ -1,9 +1,16 @@
-<div class='col-md-4'>
-  <h4><%= link_to product.title, product_path(product) %></h4>
+<div class='col-md-4 vertical-pad-sm'>
 
-  <%= link_to product_path(product) do %>
-    <%= image_tag product.image1.medium.to_s, class: "img-contain" %>
-  <% end %>
+  <div class="img-contain-3">
+    <%= link_to product_path(product) do %>
+      <%= image_tag product.image1.medium.to_s %>
+    <% end %>
 
-  <p><%= number_to_currency product.price_in_pounds, unit: "£" %></p>
+    <div class="product-card">
+      <div class="product-info">
+        <span><%= product.title %></span>
+        <span><%= number_to_currency product.price_in_pounds, unit: "£" %></span>
+      </div>
+    </div>
+  </div>
+
 </div>
