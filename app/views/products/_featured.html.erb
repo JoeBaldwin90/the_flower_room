@@ -1,5 +1,9 @@
-<h4><%= link_to featured.title, product_path(featured) %></h4>
+<div class="col-6">
+
+  <h4><%= link_to featured.title, product_path(featured) %></h4>
 
 <%= link_to product_path(featured) do %>
   <%= image_tag featured.image1.medium.to_s, class: "img-contain" %>
 <% end %>
+
+</div>
