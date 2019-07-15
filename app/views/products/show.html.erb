@@ -1,7 +1,7 @@
 <h2><%= @product.title %></h2>
 <p><%= simple_format @product.description %></p>
 
-<%= image_tag @product.image1.large.to_s %>
+<%= image_tag @product.image1.medium.to_s %>
 
 <%= simple_form_for [@product, @order_item] do |f| %>
   <%= f.input :quantity %>

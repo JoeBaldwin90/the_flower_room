@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :orders
 
   get "info", to: "pages#info"
+  get "contact", to: "pages#contact"
+  get "events", to: "pages#events"
 
   root "pages#home"
 

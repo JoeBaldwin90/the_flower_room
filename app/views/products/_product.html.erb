@@ -1,7 +1,9 @@
-<h2><%= link_to product.title, product_path(product) %> - <%= number_to_currency product.price_in_pounds, unit: "£" %></h2>
+<div class='col-md-4'>
+  <h4><%= link_to product.title, product_path(product) %></h4>
 
-<%= link_to product_path(product) do %>
-  <%= image_tag product.image1.medium.to_s %>
-<% end %>
+  <%= link_to product_path(product) do %>
+    <%= image_tag product.image1.medium.to_s, class: "img-contain" %>
+  <% end %>
 
-<p><%= product.description %></p>
+  <p><%= number_to_currency product.price_in_pounds, unit: "£" %></p>
+</div>
