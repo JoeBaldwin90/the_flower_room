@@ -1,9 +1,22 @@
-<h1>Welcome to The Flower Room</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui nostrum quam perspiciatis, explicabo ipsum hic dolor, porro debitis quaerat eveniet alias pariatur neque. Error molestias perferendis, pariatur id sed asperiores dolorum maiores ullam itaque, dolorem cum unde eaque, aperiam nam sapiente totam ab impedit nostrum soluta. Distinctio consequuntur sit blanditiis.</p>
+<section class="hero" id="bettyhero"></section>
 
-<h2>Featured products</h2>
-<section class="featured">
-  <div class='row'>
-  <%= render partial: "products/featured", collection: @featured_products %>
+<section class="container vertical-pad">
+  <h1>Welcome to The Flower Room</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui nostrum quam perspiciatis, explicabo ipsum hic dolor, porro debitis quaerat eveniet alias pariatur neque. Error molestias perferendis, pariatur id sed asperiores dolorum maiores ullam
+    itaque, dolorem cum unde eaque, aperiam nam sapiente totam ab impedit nostrum soluta. Distinctio consequuntur sit blanditiis.</p>
+</section>
+
+<section class="hero blockhero">
+  <div class="container vertical-pad">
+    <h2>Featured products</h2>
+    <div class="row">
+      <%= render partial: "products/featured", collection: @featured_products %>
+    </div>
   </div>
+</section>
+
+<section class="container vertical-pad">
+  <h2>Get a quote</h2>
+  <p>Request form coming soon!. For now, please <%= link_to "call or email us", contact_path %>!</p>
 </section>

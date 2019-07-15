@@ -1,5 +1,14 @@
-<h4><%= link_to featured.title, product_path(featured) %></h4>
+<div class="col">
 
-<%= link_to product_path(featured) do %>
-  <%= image_tag featured.image1.medium.to_s, class: "img-contain" %>
-<% end %>
+  <div class="img-contain featured">
+    <%= link_to product_path(featured) do %>
+    <%= image_tag featured.image1.large.to_s, class: "" %>
+  <% end %>
+
+  <div class="overlay">
+    <%= link_to featured.title, product_path(featured) %>
+    <span><%= number_to_currency featured.price_in_pounds, unit: "£" %></span>
+  </div>
+</div>
+
+</div>
