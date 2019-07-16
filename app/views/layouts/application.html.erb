@@ -36,13 +36,13 @@
             <li class="nav-item dropdown">
               <%= link_to "Info", info_path, class: 'nav-link dropdown-toggle', id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true"}, aria: { expanded: "false"} %>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="contact">Contact</a>
-                <a class="dropdown-item" href="events">Events</a>
-                <a class="dropdown-item" href="info">How to order</a>
+                <%= link_to "Contact", contact_path, class: 'dropdown-item' %>
+                <%= link_to "Events", events_path, class: 'dropdown-item' %>
+                <%= link_to "How to order", info_path, class: 'dropdown-item' %>
               </div>
             </li>
             <li class="nav-item">
-              <%= link_to cart_path, :class => 'nav-link' do %>
+              <%= link_to cart_path, class: "nav-link" do %>
               Cart (<%= number_to_currency @current_cart.total_price_in_pounds, unit: "£" %>)
             <% end %>
           </li>

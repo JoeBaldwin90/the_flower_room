@@ -40,7 +40,9 @@
   background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(255,255,255,0));
   transform: translateY(100%);
   transition: all 0.5s ease;
-  a, span {
+
+  a,
+  span {
     color: #fff;
     font-size: 1.25rem;
     font-family: $headings-font-family;
@@ -48,5 +50,26 @@
 }
 
 .featured:hover .overlay {
-    transform: translateY(0%);
+  transform: translateY(0%);
+}
+// Contact
+
+.card {
+
+  flex-direction: initial;
+  border: none;
+  overflow: hidden;
+
+  .card-body {
+    margin: auto;
+  }
+
+  .betty {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    background-image: url("https://theflowerroombarnes.s3.eu-west-2.amazonaws.com/Screenshot+2019-07-13+at+15.41.05.png");
+    background-size: cover;
+    background-position: bottom;
+  }
 }
