@@ -2,7 +2,11 @@ body {
   margin-top: 55px;
 }
 
-.vertical-pad {
+nav {
+  background-color: #fff;
+}
+
+.vp {
   padding: 50px 15px;
 }
 
@@ -33,26 +37,23 @@ logo {
   padding-bottom: 50px;
 }
 
-.pink {
-  background-color: $brand-primary;
-  padding: 25px;
-  position: relative;
-  max-width: 500px;
-}
+.button {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
-.betty {
-  position: relative;
-  height: 210px;
-  width: 210px;
-  background-image: url("https://theflowerroombarnes.s3.eu-west-2.amazonaws.com/Screenshot+2019-07-13+at+15.41.05.png");
-  background-size: cover;
-  background-position: bottom;
-  margin: -25px 0 0 auto;
-  .text {
-    position: absolute;
-    bottom: 0;
-    transform: translateX(calc(-100% - 10px));
-    text-align: right;
-    width: 12rem;
+  padding: 5px 15px;
+  background-color: #e6aacf;
+  border-radius: 4px;
+
+  &:hover {
+    color: #fff;
+    background-color: #f5b1d4;
+    box-shadow: 1px 1px 3px #77777740;
+  }
+  &:active {
+    color: #fff;
+    background-color: #d496b9;
+    color: #fff;
   }
 }
