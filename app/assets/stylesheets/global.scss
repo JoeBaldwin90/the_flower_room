@@ -6,16 +6,36 @@ nav {
   background-color: #fff;
 }
 
-.vp {
-  padding: 50px 15px;
+.hero {
+  width: 100%;
 }
 
-.vertical-pad-sm {
-  padding: 10px;
+.blockhero {
+  background-color: $brand-primary;
+}
+
+.vp {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.vp-sm {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.vh-sm {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .text-60 {
   max-width: 440px;
+}
+
+.title {
+  font-family: $headings-font-family;
+  font-size: 24px;
 }
 
 footer {
@@ -45,7 +65,7 @@ logo {
   padding-bottom: 50px;
 }
 
-.button {
+.cta {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -62,6 +82,27 @@ logo {
   &:active {
     color: #fff;
     background-color: #d496b9;
+    color: #fff;
+  }
+}
+
+.button {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  padding: 5px 15px;
+  background-color: $brand-grey;
+  border-radius: 4px;
+
+  &:hover {
+    color: #fff;
+    background-color: #aaaaaa;
+    box-shadow: 1px 1px 3px #77777740;
+  }
+  &:active {
+    color: #fff;
+    background-color: #888;
     color: #fff;
   }
 }

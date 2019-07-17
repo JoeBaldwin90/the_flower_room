@@ -1,11 +1,24 @@
-<h2><%= @product.title %></h2>
-<p><%= simple_format @product.description %></p>
+<section class="container vp">
+  <div class="product-container row">
 
-<%= image_tag @product.image1.medium.to_s %>
+    <div class="product-image col">
+      <%= image_tag @product.image1.medium.to_s %>
+    </div>
 
-<%= simple_form_for [@product, @order_item] do |f| %>
-  <%= f.input :quantity %>
-  <%= f.button :submit, "Add to cart" %>
-<% end %>
+    <div class="product-description col">
+      <div class="product-info text-60">
+        <h2><%= @product.title %></h2>
+        <%= simple_format @product.description %>
+        <span class="title vp-sm"><%= number_to_currency @product.price_in_pounds, unit: "£" %></span>
+      </div>
+      <div class="product-quantity">
+        <%= render partial: "quantity" %>
+      </div>
+    </div>
 
-<p><%= link_to "Back to all products", products_path %></p>
+  </div>
+</section>
+
+<section class="container vp-sm">
+  <%= link_to "Back to all products", products_path, class: "button" %>
+</section>
