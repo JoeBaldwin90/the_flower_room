@@ -1,13 +1,17 @@
-<h1>Thanks <%= @order.first_name %>,</h1>
-<p>Your order has been completed. </p>
+<section class="container vp">
+  <h1>Thanks
+    <%= @order.first_name %>,</h1>
+  <p>Your payment was successful.</p>
 
-<p><strong>Here's what you bought</strong></p>
-<% @order.order_items.each do |item| %>
-  <li><%= item.quantity %> <%= item.product.title %> at <%= number_to_currency item.product.price_in_pounds, unit: "£" %> each. </li>
-<% end %>
+  <h5>You bought:</h5>
+  <% @order.order_items.each do |item| %>
+    <li class="container"><%= item.quantity %>
+      <%= item.product.title %> at <%= number_to_currency item.product.price_in_pounds, unit: "£" %> each.</li>
+  <% end %>
 
-<p>We've sent an order confirmation email to <strong><%= @order.email %></strong>.</p>
+<p>We've sent an order confirmation email to
+  <strong><%= @order.email %></strong>.</p>
+  <p>If you have a question about your order, please <%= link_to "contact us", root_path, class: "link" %></p>
 
-<button>
-  <%= link_to "Back to home", root_path %>
-</button>
+<%= link_to "Back to home", root_path, class: "button" %>
+</section>

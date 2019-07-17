@@ -6,6 +6,20 @@ nav {
   background-color: #fff;
 }
 
+a.link {
+  border-bottom: 2px solid $brand-info;
+  font-weight: bold;
+  &:hover {
+    color: #666;
+    border-bottom: 2px solid $brand-success;
+    transform: translateY(1px)
+  }
+  &:active {
+    color: #000;
+    transform: translateY(2px)
+  }
+}
+
 .hero {
   width: 100%;
 }
@@ -49,10 +63,10 @@ footer {
   padding-bottom: 5px;
   a {
     color: $brand-primary;
-    transition: all 0.5s ease;
     &:hover {
-      color: $brand-primary;
-      letter-spacing: 2px;
+      color: #fff2d7;
+      border-bottom: solid 2px $brand-info;
+      transform: translateY(2px);
     }
   }
 }

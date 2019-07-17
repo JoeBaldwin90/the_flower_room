@@ -1,3 +1,5 @@
+// Payment form
+
 #card-errors {
   border-left: 3px solid #000;
   padding-left: 10px;
@@ -36,6 +38,7 @@ fieldset {
     line-height: 1.2;
     font-size: 1.15rem;
     letter-spacing: 1px;
+    text-transform: capitalize;
   }
 
   label {
@@ -61,8 +64,19 @@ fieldset {
   padding: 10px;
 }
 
+#order_postal_code {
+  text-transform: uppercase;
+}
+
+#order_email {
+  text-transform: lowercase;
+}
+
 .row {
   .col {
     max-width: 50%;
   }
 }
+
+
+// Order complete
