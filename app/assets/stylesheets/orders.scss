@@ -1,3 +1,82 @@
-// Place all the styles related to the orders controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Payment form
+
+#card-errors {
+  border-left: 3px solid #000;
+  padding-left: 10px;
+  line-height: 2.5;
+  margin: 20px 0;
+  background-color: #c1aae6;
+}
+
+.payment-form {
+  max-width: 500px;
+  margin: 100px auto;
+}
+
+fieldset {
+  border: 1px dotted #33333350;
+  padding: 20px;
+  margin-bottom: 10px;
+
+  .input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+
+  select {
+    background: transparent;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  input {
+    background-color: transparent;
+    border: 1px solid #99999950;
+    padding: 10px 10px 10px 15px;
+    line-height: 1.2;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+  }
+
+  label {
+    margin: 0;
+    color: #aaaaaa;;
+  }
+
+  abbr {
+    display: none;
+  }
+
+  label {
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+  }
+}
+
+.pay {
+  width: 100%;
+}
+
+#card {
+  padding: 10px;
+}
+
+#order_postal_code {
+  text-transform: uppercase;
+}
+
+#order_email {
+  text-transform: lowercase;
+}
+
+.row {
+  .col {
+    max-width: 50%;
+  }
+}
+
+
+// Order complete

@@ -225,3 +225,9 @@ template {
 .table td {
   vertical-align: middle !important;
 }
+
+// Lists
+li, ul {
+  list-style: none;
+  margin-bottom: 5px;
+}

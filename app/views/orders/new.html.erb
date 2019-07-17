@@ -1,18 +1,22 @@
-<h1>Checkout</h1>
-<p>Number of order_items in cart:</p>
+<section class="container payment-form">
+<h2>Payment Information</h2>
 
-<%= simple_form_for @order do |f| %>
+  <%= simple_form_for @order do |f| %>
   <fieldset>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
+    <div class="name row">
+      <div class="col"><%= f.input :first_name %></div>
+      <div class="col"><%= f.input :last_name, class: "col" %></div>
+    </div>
     <%= f.input :email %>
   </fieldset>
 
   <fieldset>
-    <%= f.input :address_1 %>
-    <%= f.input :address_2 %>
-    <%= f.input :city %>
-    <%= f.input :postal_code %>
+    <%= f.input :address_1, label: "Address line 1" %>
+    <%= f.input :address_2, label: "Address line 2" %>
+    <div class="city row">
+      <div class="col"><%= f.input :city %></div>
+      <div class="col"><%= f.input :postal_code %></div>
+    </div>
     <%= f.input :country, priority: ['United Kingdom'] %>
   </fieldset>
 
@@ -23,12 +27,14 @@
   <!-- Used to display Element errors. -->
   <div id="card-errors" role="alert">
     <% @order.errors[:stripe_token].each do |message| %>
-      <p class="error"><%= message %></p>
+      <%= message %>
     <% end %>
   </div>
 
-  <%= f.button :submit, "Pay for your flowers!" %>
+  <%= f.button :submit, "Pay for your flowers!", class: "cta pay" %>
 <% end %>
+
+</section>
 
 <!-- Stripe's front-end JavaScript -->
 <script>
@@ -36,7 +42,11 @@
 var stripe = Stripe('<%= Rails.application.credentials.stripe_public_key_test %>');
 
 var elements = stripe.elements({
-  fonts: [{cssSrc: 'https://fonts.googleapis.com/css?family=Roboto'}]
+  fonts: [
+    {
+      cssSrc: 'https://fonts.googleapis.com/css?family=Roboto'
+    }
+  ]
 });
 
 // Create card element
