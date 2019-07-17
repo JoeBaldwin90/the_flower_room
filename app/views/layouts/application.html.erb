@@ -43,7 +43,7 @@
             </li>
             <li class="nav-item">
               <%= link_to cart_path, class: "nav-link" do %>
-              Cart (<%= number_to_currency @current_cart.total_price_in_pounds, unit: "£" %>)
+              Basket (<%= number_to_currency @current_cart.total_price_in_pounds, unit: "£" %>)
             <% end %>
           </li>
         </ul>

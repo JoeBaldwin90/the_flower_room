@@ -1,0 +1,22 @@
+<%= simple_form_for [@product, @order_item] do |f| %>
+
+<div class="quantity-controller vp-sm">
+
+  <span class="selector" onclick="this.parentNode.querySelector('#order_item_quantity').stepDown()">
+    <svg height="30px" viewbox="0 0 512 512" width="30px" xmlns="http://www.w3.org/2000/svg"><path
+      d="m256 0c-141.164062 0-256 114.835938-256 256s114.835938 256 256 256 256-114.835938 256-256-114.835938-256-256-256zm112 277.332031h-224c-11.777344 0-21.332031-9.554687-21.332031-21.332031s9.554687-21.332031 21.332031-21.332031h224c11.777344 0 21.332031 9.554687 21.332031 21.332031s-9.554687 21.332031-21.332031 21.332031zm0 0"/></svg>
+  </span>
+
+  <%= f.input :quantity, as: :integer, label: false, input_html: { class: 'qty' } %>
+
+  <span class="selector" onclick="this.parentNode.querySelector('#order_item_quantity').stepUp()">
+    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewbox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
+      <path d="M255,0C114.75,0,0,114.75,0,255s114.75,255,255,255s255-114.75,255-255S395.25,0,255,0z M382.5,280.5h-102v102h-51v-102
+        			h-102v-51h102v-102h51v102h102V280.5z"/>
+    </svg>
+  </span>
+
+</div>
+
+<%= f.button :submit, "Add to basket", class: "cta" %>
+<% end %>

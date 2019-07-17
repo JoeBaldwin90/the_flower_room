@@ -1,8 +1,9 @@
 //== Colors
-$brand-primary:         #FFEFF9 !default; // Pink
+$brand-primary:         #fffaf0 !default; // Floralwhite
 $brand-success:         #cfe6aa !default; // Green
 $brand-info:            #e6aacf !default; // Purple
 $brand-warning:         #e6b6aa !default; // Red
+$brand-grey:            #c0c0c0 !default; // Grey
 
 // Text
 $body-bg:               #fff !default;
@@ -15,8 +16,6 @@ $link-hover-decoration: none !default;
 // Body
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700&display=swap');
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 $font-family-base:        "Josefin Slab", serif !default;
 
 // Headings
