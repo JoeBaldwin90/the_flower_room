@@ -1,3 +1,33 @@
-// Place all the styles related to the carts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// Cart page
+
+.basket_quantity {
+  display: flex;
+  align-items: center;
+
+  .selector {
+    padding: 10px;
+  }
+
+  .qty {
+    width: 42px;
+  }
+
+  .numeric {
+    text-align: end;
+    border: none;
+    font-size: 1.5rem;
+  }
+
+  .button {
+    margin-left: 20px;
+  }
+}
+
+.total {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  text-align: right;
+  padding: 20px 0;
+}
