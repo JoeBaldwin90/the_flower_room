@@ -1,5 +1,5 @@
 <section class="container payment-form">
-<h2>Payment Information</h2>
+  <h2>Payment Information</h2>
 
   <%= simple_form_for @order do |f| %>
   <fieldset>
@@ -7,9 +7,21 @@
       <div class="col"><%= f.input :first_name %></div>
       <div class="col"><%= f.input :last_name, class: "col" %></div>
     </div>
+    <div id="card"></div>
+    <!-- Used to display Element errors. -->
+    <div id="card-errors" role="alert">
+      <% @order.errors[:stripe_token].each do |message| %>
+        <%= message %>
+      <% end %>
+    </div>
+  </fieldset>
+  <h2>Contact details</h2>
+  <fieldset>
     <%= f.input :email %>
+    <%= f.input :phone_number %>
   </fieldset>
 
+  <h2>Delivery Information</h2>
   <fieldset>
     <%= f.input :address_1, label: "Address line 1" %>
     <%= f.input :address_2, label: "Address line 2" %>
@@ -21,15 +33,8 @@
   </fieldset>
 
   <fieldset>
-    <div id="card"></div>
+    <%= f.input :message, label: "Add a personal message if you like", placeholder: "Type here..."%>
   </fieldset>
-
-  <!-- Used to display Element errors. -->
-  <div id="card-errors" role="alert">
-    <% @order.errors[:stripe_token].each do |message| %>
-      <%= message %>
-    <% end %>
-  </div>
 
   <%= f.button :submit, "Pay for your flowers!", class: "cta pay" %>
 <% end %>

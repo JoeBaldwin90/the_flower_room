@@ -1,11 +1,25 @@
 // Payment form
 
+span.error,
 #card-errors {
-  border-left: 3px solid #000;
+  background-color: #e6aacf40;
+  border-left: 5px solid #e6aacf;
+  margin: 5px;
   padding-left: 10px;
-  line-height: 2.5;
-  margin: 20px 0;
-  background-color: #c1aae6;
+  line-height: 1.5;
+  font-style: italic;
+  color: #666;
+}
+
+#order_message {
+  padding: 10px;
+  border: 1px solid #99999950;
+}
+
+#card {
+  border: 1px solid #99999950;
+  padding: 10px 10px 10px 15px;
+  margin-top: 10px;
 }
 
 .payment-form {
@@ -43,7 +57,7 @@ fieldset {
 
   label {
     margin: 0;
-    color: #aaaaaa;;
+    color: #aaaaaa;
   }
 
   abbr {
@@ -77,6 +91,4 @@ fieldset {
     max-width: 50%;
   }
 }
-
-
 // Order complete

@@ -3,15 +3,23 @@
     <%= @order.first_name %>,</h1>
   <p>Your payment was successful.</p>
 
-  <h5>You bought:</h5>
+  <h6>You bought:</h6>
   <% @order.order_items.each do |item| %>
-    <li class="container"><%= item.quantity %>
-      <%= item.product.title %> at <%= number_to_currency item.product.price_in_pounds, unit: "£" %> each.</li>
+    <ol>
+      <li class="container"><%= item.quantity %>
+        <%= item.product.title %> at <%= number_to_currency item.product.price_in_pounds, unit: "£" %> each.</li>
+    </ol>
   <% end %>
 
-<p>We've sent an order confirmation email to
+  <% if @order.message.present? %>
+    <h6>Your personal message:</h6>
+    <p><%= @order.message %></p>
+  <% end %>
+
+  <p>We've sent an order confirmation email to
   <strong><%= @order.email %></strong>.</p>
-  <p>If you have a question about your order, please <%= link_to "contact us", root_path, class: "link" %></p>
+
+  <p>If you have a question about your order, please <%= link_to "contact us", contact_path, class: "link" %></p>
 
 <%= link_to "Back to home", root_path, class: "button" %>
 </section>
