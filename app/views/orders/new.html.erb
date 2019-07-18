@@ -7,9 +7,14 @@
       <div class="col"><%= f.input :first_name %></div>
       <div class="col"><%= f.input :last_name, class: "col" %></div>
     </div>
+    <div id="card"></div>
+  </fieldset>
+<h2>Contact details</h2>
+  <fieldset>
     <%= f.input :email %>
   </fieldset>
 
+<h2>Delivery Information</h2>
   <fieldset>
     <%= f.input :address_1, label: "Address line 1" %>
     <%= f.input :address_2, label: "Address line 2" %>
@@ -18,10 +23,6 @@
       <div class="col"><%= f.input :postal_code %></div>
     </div>
     <%= f.input :country, priority: ['United Kingdom'] %>
-  </fieldset>
-
-  <fieldset>
-    <div id="card"></div>
   </fieldset>
 
   <!-- Used to display Element errors. -->
