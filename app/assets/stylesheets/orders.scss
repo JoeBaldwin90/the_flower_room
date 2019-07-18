@@ -1,11 +1,14 @@
 // Payment form
 
+span.error,
 #card-errors {
-  border-left: 3px solid #000;
+  background-color: #e6aacf40;
+  border-left: 5px solid #e6aacf;
+  margin: 5px;
   padding-left: 10px;
-  line-height: 2.5;
-  margin: 20px 0;
-  background-color: #c1aae6;
+  line-height: 1.5;
+  font-style: italic;
+  color: #666;
 }
 
 #card {
