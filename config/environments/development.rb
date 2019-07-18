@@ -7,8 +7,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   # Require master RAILS_MASTER_KEY
-  config.require_master_key = false  
-  config.read_encrypted_secrets = false
+  config.require_master_key = true  
 
   # Do not eager load code on boot.
   config.eager_load = false
