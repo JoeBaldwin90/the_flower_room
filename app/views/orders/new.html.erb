@@ -32,6 +32,10 @@
     <%= f.input :country, priority: ['United Kingdom'] %>
   </fieldset>
 
+  <fieldset>
+    <%= f.input :message, label: "Add a personal message if you like", placeholder: "Type here..."%>
+  </fieldset>
+
   <%= f.button :submit, "Pay for your flowers!", class: "cta pay" %>
 <% end %>
 
