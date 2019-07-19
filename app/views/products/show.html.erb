@@ -1,24 +1,27 @@
-<section class="container vp">
-  <div class="product-container row">
+<section class="container vp" id="product-container">
+  <div class="fill">
+    <div class="row">
 
-    <div class="product-image col">
-      <%= image_tag @product.image1.medium.to_s %>
+      <div class="product-image col">
+        <%= image_tag @product.image1.medium.to_s %>
+      </div>
+
+      <div class="product-description col">
+        <div class="product-info text-60">
+          <h2><%= @product.title %></h2>
+          <%= simple_format @product.description %>
+          <span class="title vp-sm"><%= number_to_currency @product.price_in_pounds, unit: "£" %></span>
+        </div>
+        <div class="product-quantity">
+          <%= render partial: "quantity" %>
+        </div>
+      </div>
+
     </div>
 
-    <div class="product-description col">
-      <div class="product-info text-60">
-        <h2><%= @product.title %></h2>
-        <%= simple_format @product.description %>
-        <span class="title vp-sm"><%= number_to_currency @product.price_in_pounds, unit: "£" %></span>
-      </div>
-      <div class="product-quantity">
-          <%= render partial: "quantity" %>
-      </div>
+    <div class="container vp-sm back">
+      <%= link_to "All products", products_path, class: "button" %>
     </div>
 
   </div>
-</section>
-
-<section class="container vp-sm">
-  <%= link_to "Back to all products", products_path, class: "button" %>
 </section>
