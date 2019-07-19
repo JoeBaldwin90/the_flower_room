@@ -1,0 +1,71 @@
+// Homepage
+
+@media (max-width: 991px) {
+
+  .featured {
+    height: 40vh;
+  }
+}
+
+
+
+@media (max-width: 770px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    max-width: 545px;
+  }
+
+  .featured-products {
+    display: block;
+    margin-top: 20px;
+
+    .col {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .featured {
+      height: 56vh;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+
+  .vp {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  #bettyhero {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 460px) {
+
+  .featured-products .featured {
+    height: 50vh;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 425px) {
+
+  .featured-products .featured {
+    height: 45vh;
+    width: 100%;
+  }
+
+}

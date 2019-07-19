@@ -9,14 +9,16 @@ nav {
 a.link {
   border-bottom: 2px solid $brand-info;
   font-weight: bold;
+
   &:hover {
     color: #666;
     border-bottom: 2px solid $brand-success;
-    transform: translateY(1px)
+    transform: translateY(1px);
   }
+
   &:active {
     color: #000;
-    transform: translateY(2px)
+    transform: translateY(2px);
   }
 }
 
@@ -54,15 +56,15 @@ a.link {
 
 footer {
   background-color: #1C0904;
-  position: fixed;
   width: 100%;
-  bottom: 0;
+  padding: 10px 15px;
   color: $brand-primary;
-  height: 2rem;
-  text-align: center;
-  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
+
   a {
     color: $brand-primary;
+
     &:hover {
       color: #fff2d7;
       border-bottom: solid 2px $brand-info;
@@ -75,15 +77,10 @@ logo {
   font-family: $headings-font-family;
 }
 
-.yield {
-  padding-bottom: 50px;
-}
-
 .cta {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
-
   padding: 5px 15px;
   background-color: #e6aacf;
   border-radius: 4px;
@@ -93,6 +90,7 @@ logo {
     background-color: #f5b1d4;
     box-shadow: 1px 1px 3px #77777740;
   }
+
   &:active {
     color: #fff;
     background-color: #d496b9;
@@ -104,7 +102,6 @@ logo {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
-
   padding: 5px 15px;
   background-color: $brand-grey;
   border-radius: 4px;
@@ -114,6 +111,7 @@ logo {
     background-color: #aaaaaa;
     box-shadow: 1px 1px 3px #77777740;
   }
+
   &:active {
     color: #fff;
     background-color: #888;
