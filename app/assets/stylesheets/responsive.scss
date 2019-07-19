@@ -1,16 +1,19 @@
 // Homepage
-
 @media (max-width: 991px) {
-
   .featured {
     height: 40vh;
   }
+
+  .container {
+    max-width: 800px;
+  }
 }
-
-
-
-@media (max-width: 770px) {
-
+@media (max-width: 830px) {
+  #product-container {
+    max-width: calc(100% - 30px);
+  }
+}
+@media (max-width: 775px) {
   h1 {
     font-size: 2rem;
   }
@@ -20,7 +23,79 @@
   }
 
   .container {
-    max-width: 545px;
+    max-width: 550px;
+  }
+
+  #product-container {
+    .back {
+      text-align: center;
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
+
+    .row {
+      display: block;
+      margin: 0 auto;
+      max-width: 410px;
+
+      .col {
+        max-width: none;
+      }
+    }
+
+    .product-image {
+      margin-bottom: 20px;
+      max-width: none;
+      height: 40vh;
+    }
+
+    .product-description {
+      margin: 0 auto;
+      align-items: center;
+      width: 100%;
+
+      .product-info,
+      .product-quantity {
+        width: 100%;
+      }
+
+      .product-quantity {
+        .button,
+        .cta {
+          width: 100%;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+
+        .quantity-controller {
+          max-width: none;
+        }
+      }
+    }
+  }
+
+  #products-container {
+    max-width: 100%;
+  }
+
+  #products-container {
+    max-width: inherit;
+
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .img-contain-3 {
+    height: 40vh;
   }
 
   .featured-products {
@@ -39,9 +114,7 @@
     }
   }
 }
-
 @media (max-width: 575px) {
-
   .vp {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -50,22 +123,36 @@
   #bettyhero {
     height: 40vh;
   }
+
+  #product-container .img-contain-3 {
+    height: 30vh;
+  }
 }
-
 @media (max-width: 460px) {
-
   .featured-products .featured {
     height: 50vh;
     width: 100%;
   }
 
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #product-container .img-contain-3 {
+    height: 50vh;
+  }
+
+  .product-card {
+    background-color: #FFEFF915;
+    opacity: inherit;
+  }
 }
-
 @media (max-width: 425px) {
-
   .featured-products .featured {
     height: 45vh;
     width: 100%;
   }
-
 }
