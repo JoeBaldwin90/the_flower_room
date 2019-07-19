@@ -1,8 +1,4 @@
 {
-  "scripts": {
-    "postdeploy": "rails db:migrate"
-  },
-
   "env": {
     "RAILS_MASTER_KEY": {
       "required": true
