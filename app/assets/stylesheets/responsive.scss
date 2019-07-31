@@ -130,7 +130,9 @@
   }
   .basket_quantity {
     flex-wrap: wrap;
-    text-align: center;
+    .numeric {
+      text-align: center;
+    }
     .quantity_controller {
       justify-content: space-between;
       width: 100%;
